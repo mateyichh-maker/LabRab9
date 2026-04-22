@@ -1,0 +1,268 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+}
+
+div,
+p,
+input,
+button,
+form,
+span,
+a,
+ul,
+li {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 900;
+}
+
+p {
+	line-height: 1.65em;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.header {
+	background: #7abcff;
+	background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	background: linear-gradient(to bottom, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7abcff', endColorstr='#4096ee', GradientType=0);
+	color: #fff;
+	padding-top: 60px;
+	padding-bottom: 140px;
+	color: #fff;
+}
+
+.box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 70px;
+}
+
+.nachalo {
+	width: 700px;
+}
+
+.title {
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+
+.tw {
+	font-size: 48px;
+	letter-spacing: 2px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+	transition: all 0.5s ease;
+}
+
+.tw:hover {
+	cursor: pointer;
+}
+
+.tw:active {
+	font-size: 70px;
+}
+
+.nachalo_txt {
+	font-size: 14px;
+	width: 350px;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.phone {
+	margin-top: 20px;
+	width: 480px;
+}
+
+.btn {
+	width: 300px;
+	height: 55px;
+	color: black;
+	font-size: 16px;
+	font-weight: bold;
+	display: block;
+	text-decoration: none;
+	background-color: #ffd429;
+	padding: 15px 0px;
+	text-align: center;
+	transition: all 0.5s ease;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.btn:hover {
+	background-color: #edc730;
+	cursor: pointer;
+}
+
+.H2 {
+	text-align: center;
+	margin-top: 70px;
+}
+
+.pngshki {
+	text-align: center;
+	margin-top: 50px;
+	width: 30%;
+	justify-items: center;
+}
+
+.pngshki2 {
+	-webkit-animation-name: example;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s;
+	/* Safari 4.0 - 8.0 */
+	animation-name: example;
+	animation-duration: 4s;
+}
+
+@keyframes example {
+	0% {
+		background-color: white;
+	}
+
+	25% {
+		background-color: red;
+		color: black;
+	}
+
+	50% {
+		background-color: green;
+	}
+
+	75% {
+		background-color: blue;
+		color: white;
+	}
+
+	100% {
+		background-color: white;
+	}
+}
+
+.lorem {
+	color: #3d3d3f;
+}
+
+.block {
+	margin: 0 auto;
+	background: hsl(185, 60%, 90%);
+}
+
+.reg_form {
+	margin: 0 auto;
+	background: hsl(186, 27%, 61%);
+}
+
+.Airballoon {
+	transition: all 0.5s ease;
+	background: url("f4.png") no-repeat;
+	height: 70px;
+	width: 70px;
+}
+
+.Airballoon:hover {
+	cursor: pointer;
+	background: url("f4bw.png") no-repeat;
+}
+
+.headline {
+	padding: 0px 0 10px 0;
+	position: relative;
+	animation-name: headline;
+	animation-duration: 4s;
+	animation-iteration-count: 5;
+}
+
+@keyframes headline {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+
+	20% {
+		left: 0px;
+		top: 450px;
+	}
+
+	40% {
+		left: -100px;
+		top: 450px;
+	}
+
+	60% {
+		left: 200px;
+		top: 450px;
+	}
+
+	80% {
+		left: 0px;
+		top: 450px;
+	}
+
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+.forms {
+	display: block;
+	justify-items: center;
+	padding: 100px;
+}
+
+.inp {
+	width: 370px;
+	height: 60px;
+	font-weight: bold;
+	display: block;
+	padding: 10px 0px 10px 20px;
+	text-align: left;
+	margin: 20px 0px;
+}
+
+footer {
+	background: #3f9cf8;
+	background: -moz-linear-gradient(top, #3f9cf8 0%, #60abf8 44%, #4096ee 100%);
+	background: -webkit-linear-gradient(top, #3f9cf8 0%, #60abf8 44%, #4096ee 100%);
+	background: linear-gradient(to bottom, #3f9cf8 0%, #60abf8 44%, #4096ee 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7abcff', endColorstr='#4096ee', GradientType=0);
+	color: #fff;
+	padding-top: 50px;
+	color: #fff;
+	height: 100px;
+	justify-items: center;
+}
+
+.valid {
+  color: green;
+  font-size: 14px;
+}
+
+.invalid {
+  color: red;
+  font-size: 14px;
+}

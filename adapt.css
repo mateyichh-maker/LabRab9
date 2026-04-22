@@ -1,0 +1,48 @@
+/* Extra large devices (large desktops, 1200px and up)*/
+@media screen and (max-width: 1200px) {
+
+    .container {
+        width: 960px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .phone {
+        padding-left: 50px;
+    }
+
+    .pngshki {
+        width: 45%;
+        margin-bottom: 40px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    .nachalo {
+        width: 100%;
+    }
+
+    .phone {
+        margin-top: 70px;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media screen and (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+}
