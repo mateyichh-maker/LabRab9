@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="8LR_Novikov_Styles.css" />
+    <link rel="stylesheet" href="adapt.css">
+    <script src="val.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="logo.png" alt="logo" class="logo animate__animated animate__backInRight">
+            <!-- Лого всплывает с правой стороны -->
+            <div class="box">
+                <div class="nachalo">
+                    <h1 class="title">С помощью нас </br>
+                        вы сможете создать то, о чем</h1>
+                    <span class="tw">желаете!</span>
+                    <!-- При длительном нажатии текст увеличивается -->
+                    <p class="nachalo_txt">Наши возможности + опыт позволят Вам достичь огрмного успеха. Мы верим в
+                        вас!
+                        И знаем это на все 100%. Вас не остановить!</p>
+                    <a href="#" class="btn">Узнать больше...</a>
+                </div>
+                <img src="header-img.png" alt="phone" class="phone animate__animated animate__bounceIn">
+                <!-- Телефон пульсирует -->
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="H2">
+            <h2 class="chto">Что вам необходимо?</h2>
+        </div>
+        <div class="box">
+            <div class="pngshki">
+                <img src="f3.png" alt="liner">
+                <h3>Первый блок</h3>
+                <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="pngshki pngshki2">
+                <div class="Airballoon"></div>
+                <!-- При наведении курсора цветная картинка меняется на чб -->
+                <h3>Второй блок</h3>
+                <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit?</p>
+            </div>
+            <!-- Меняется цвет -->
+            <div class="pngshki">
+                <img src="f5.png" alt="flag">
+                <h3>Третий блок</h3>
+                <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit!</p>
+            </div>
+        </div>
+    </div>
+    <section class="reg_form">
+        <div class="container">
+            <form action="#" method="post" enctype="multipart/form-data" class="forms">
+                <h2 class="headline">Регистрация</h2>
+                <!-- Заголовок смещается вниз и в стороны -->
+                <input type="text" id="fullname" name="fullname" placeholder="Иванов Иван Иванович" class="inp">
+                <div class="fullnameMsg"></div>
+                <input type="email" id="email" name="email" placeholder="example@mail.ru" class="inp">
+                <div class="emailMsg"></div>
+                <input type="tel" id="phone" name="phone" placeholder="+7 999 123-45-67" class="inp">
+                <div class="phoneMsg"></div>
+                <input type="date" id="birthdate" name="birthdate" class="inp">
+                <div class="birthdateMsg"></div>
+                <input type="text" id="city" name="city" placeholder="Москва, СПБ, Казань..." class="inp">
+                <div class="cityMsg"></div>
+                <button type="submit" class="btn">Отправить данные</button>
+            </form>
+        </div>
+    </section>
+    <section class="block">
+        <div class="container">
+            <form action="#" method="post" enctype="multipart/form-data" class="forms">
+                <h2 class="headline">Форма заказа для обратного звонка</h2>
+                <!-- Заголовок смещается вниз и в стороны -->
+                <input type="name" name="name" id="name" placeholder="Имя" class="inp" required>
+                <input type="email" name="email" id="email" placeholder="Введите ваш E-mail" class="inp" required>
+                <input type="tel" name="tel" id="tel" placeholder="Телефон" class="inp" required>
+                <input type="text" name="theme" id="theme" placeholder="Какая тема Вас интересует" class="inp" required>
+                <a href="#" class="btn">Отправить вопрос!</a>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Все на этом сайте защищено</p>
+    </footer>
+
+    <script>
+
+        function playGame(min, max, maxAttempts) {
+            // Загадываем случайное целое число в диапазоне [min, max]
+            const secretNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+            let attemptsLeft = maxAttempts;
+
+            for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+                const remaining = maxAttempts - attempt + 1;
+                let userNumber = null;
+                let validInput = false;
+
+                // Цикл для получения корректного ввода (только целое число в диапазоне)
+                while (!validInput) {
+                    const input = prompt(
+                        `Попытка ${attempt} из ${maxAttempts}. Осталось попыток: ${remaining}\n` +
+                        `Введите целое число от ${min} до ${max}:`
+                    );
+
+                    // Пользователь нажал "Отмена"
+                    if (input === null) {
+                        alert("Игра прервана.");
+                        const playAgain = confirm("Хотите начать новую игру?");
+                        if (playAgain) {
+                            return true;   // перезапустить игру с теми же настройками
+                        } else {
+                            return false;  // полностью выйти из игры
+                        }
+                    }
+
+                    // Проверка, что введена строка, состоящая только из цифр (целое положительное число)
+                    const trimmed = input.trim();
+                    if (!/^\d+$/.test(trimmed)) {
+                        alert("Ошибка: необходимо ввести целое число (только цифры).");
+                        const playAgain = confirm("Начать новую игру?");
+                        if (playAgain) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+
+                    const number = parseInt(trimmed, 10);
+
+                    // Проверка попадания в диапазон
+                    if (number < min || number > max) {
+                        alert(`Ошибка: число должно быть в диапазоне от ${min} до ${max}. Попробуйте снова.`);
+                        // Не тратим попытку, продолжаем цикл ввода
+                        continue;
+                    }
+
+                    // Ввод корректен
+                    userNumber = number;
+                    validInput = true;
+                }
+
+                // Сравнение с загаданным числом
+                if (userNumber === secretNumber) {
+                    alert(`Поздравляю! Вы угадали число ${secretNumber} за ${attempt} попытку(и).`);
+                    const playAgain = confirm("Сыграть ещё раз?");
+                    return playAgain;
+                } else if (userNumber < secretNumber) {
+                    alert(`Число ${userNumber} меньше загаданного.`);
+                } else {
+                    alert(`Число ${userNumber} больше загаданного.`);
+                }
+            }
+
+            // Если попытки закончились
+            alert(`Вы проиграли. Загаданное число было ${secretNumber}.`);
+            const playAgain = confirm("Сыграть ещё раз?");
+            return playAgain;
+        }
+
+        // Запрос настроек сложности у пользователя
+
+        function getGameSettings() {
+            const wantCustom = confirm("Хотите настроить сложность игры (диапазон чисел и количество попыток)?\n" +
+                "Нажмите «ОК» для настройки, «Отмена» — играть по умолчанию (1–10, 5 попыток).");
+            if (!wantCustom) {
+                return { min: 1, max: 10, attempts: 5 };
+            }
+
+            // Запрос минимального значения
+            let min = null;
+            while (min === null) {
+                const input = prompt("Введите минимальное значение диапазона (целое число):");
+                if (input === null) {
+                    alert("Настройка отменена. Будут использованы стандартные значения (1–10, 5 попыток).");
+                    return { min: 1, max: 10, attempts: 5 };
+                }
+                const trimmed = input.trim();
+                if (!/^\d+$/.test(trimmed)) {
+                    alert("Ошибка: необходимо ввести целое положительное число.");
+                    continue;
+                }
+                min = parseInt(trimmed, 10);
+            }
+
+            // Запрос максимального значения
+            let max = null;
+            while (max === null) {
+                const input = prompt("Введите максимальное значение диапазона (целое число, больше минимального):");
+                if (input === null) {
+                    alert("Настройка отменена. Будут использованы стандартные значения (1–10, 5 попыток).");
+                    return { min: 1, max: 10, attempts: 5 };
+                }
+                const trimmed = input.trim();
+                if (!/^\d+$/.test(trimmed)) {
+                    alert("Ошибка: необходимо ввести целое положительное число.");
+                    continue;
+                }
+                const val = parseInt(trimmed, 10);
+                if (val <= min) {
+                    alert(`Максимальное значение должно быть больше ${min}.`);
+                    continue;
+                }
+                max = val;
+            }
+
+            // Запрос количества попыток
+            let attempts = null;
+            while (attempts === null) {
+                const input = prompt("Введите количество попыток (целое число, больше 0):");
+                if (input === null) {
+                    alert("Настройка отменена. Будут использованы стандартные значения (1–10, 5 попыток).");
+                    return { min: 1, max: 10, attempts: 5 };
+                }
+                const trimmed = input.trim();
+                if (!/^\d+$/.test(trimmed)) {
+                    alert("Ошибка: необходимо ввести целое положительное число.");
+                    continue;
+                }
+                const val = parseInt(trimmed, 10);
+                if (val <= 0) {
+                    alert("Количество попыток должно быть больше 0.");
+                    continue;
+                }
+                attempts = val;
+            }
+
+            return { min, max, attempts };
+        }
+
+        /**
+         * Основной цикл игры. Запрашивает настройки, запускает игру и предлагает повторить.
+         */
+        function startGame() {
+            let settings = getGameSettings();
+            if (settings === null) {
+                alert("До свидания!");
+                return;
+            }
+
+            let keepPlaying = true;
+            let currentSettings = settings;
+
+            while (keepPlaying) {
+                const wantNewGame = playGame(currentSettings.min, currentSettings.max, currentSettings.attempts);
+                if (!wantNewGame) {
+                    keepPlaying = false;
+                    alert("Спасибо за игру! До встречи.");
+                } else {
+                    // Спрашиваем, изменить ли настройки перед следующей игрой
+                    const changeSettings = confirm("Хотите изменить настройки перед следующей игрой?");
+                    if (changeSettings) {
+                        const newSettings = getGameSettings();
+                        if (newSettings !== null) {
+                            currentSettings = newSettings;
+                        } else {
+                            // Если пользователь отменил настройки, остаются текущие
+                            alert("Настройки не изменены. Продолжаем с текущими параметрами.");
+                        }
+                    }
+                }
+            }
+        }
+
+        // Запуск игры
+        startGame();
+    </script>
+</body>
+
+</html>
